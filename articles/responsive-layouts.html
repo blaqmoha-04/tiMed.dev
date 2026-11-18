@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#191b20">
+  <meta name="description"
+    content="A practical approach to responsive layouts using flexible sizing and content-led breakpoints.">
+  <title>Responsive layouts without the guesswork — tiMed.dev</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+</head>
+
+<body id="top" data-page="blog">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="../home.html" aria-label="Portfolio home"><span
+        class="wordmark-name">PORTFOLIO.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="menu-toggle-label">Menu</span>
+      <span class="menu-toggle-icon" aria-hidden="true"><i></i><i></i></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="../home.html" data-page="home">Home</a>
+      <a href="../projects.html" data-page="projects">Projects</a>
+      <a href="../blog.html" data-page="blog" aria-current="page">Blog</a>
+      <a href="../about.html" data-page="about">About</a>
+      <a href="../contact.html" data-page="contact">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true">
+        <span class="theme-icon" aria-hidden="true">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.1 15.4A8.5 8.5 0 0 1 8.6 3.9 8.5 8.5 0 1 0 20.1 15.4Z" />
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+            stroke-linecap="round">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l-1.42-1.42m11.3-11.3 1.42 1.42" />
+          </svg>
+        </span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-intro">
+      <div class="page-intro-inner">
+        <a class="article-link" href="../blog.html">Back to blog</a>
+        <h1 class="page-title">Responsive layouts without the guesswork</h1>
+        <p class="page-lead">Let content guide the layout, then test the points where it needs to change.</p>
+      </div>
+    </section>
+    <article class="page-content page-content-narrow article-content">
+      <p>Responsive development is more than adding a mobile breakpoint. A layout should adapt as its content and
+        available space change, without making any one screen size an afterthought.</p>
+
+      <h2>Start with flexible pieces</h2>
+      <p>Use fluid widths, flexible grids and sensible maximum widths so content can grow and shrink. CSS Grid and
+        Flexbox are useful when the relationships between items matter more than fixed pixel positions.</p>
+
+      <h2>Let the content choose breakpoints</h2>
+      <p>Resize the page gradually and watch for the point where a line becomes hard to read, a navigation row becomes
+        cramped, or columns no longer have enough room. Add a breakpoint where the layout needs it instead of targeting
+        a specific device model.</p>
+
+      <h2>Keep text and controls usable</h2>
+      <p>Check that headings wrap naturally, body text remains comfortable to read, and buttons have enough space to
+        tap. Avoid hiding useful information just to make a narrow layout fit.</p>
+
+      <h2>Test more than one viewport</h2>
+      <p>Use browser resizing to catch obvious issues, then test actual interactions at narrow widths. Look for
+        horizontal overflow, clipped content, awkward focus order and controls that are difficult to reach.</p>
+      <p><a class="article-link" href="../blog.html">More development notes</a></p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark footer-wordmark" href="../home.html" aria-label="tiMed.dev, back to home"><span
+        class="wordmark-name">tiMed<span class="wordmark-dot">.</span>dev</span></a>
+    <p class="footer-credit">Developed by <span>Sadik Tijani Mohammed</span></p>
+    <a class="back-top mono" href="#top">BACK TO TOP</a>
+    <span class="footer-year mono">© <span id="year">2026</span></span>
+  </footer>
+</body>
+
+</html>
