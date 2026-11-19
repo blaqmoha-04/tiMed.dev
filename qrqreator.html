@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#191b20">
+    <meta name="theme-color" content="#050b18">
     <meta name="description" content="Project details for qrQreator, a browser-based QR code design studio.">
     <title>qrQreator — tiMed.dev</title>
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
@@ -12,9 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <script src="js/theme.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/navigation.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/interactions.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
-  <body id="top" data-page="projects">
+  <body id="top">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="wordmark" href="home.html" aria-label="Portfolio home"><span class="wordmark-name">PORTFOLIO.</span></a>
@@ -23,11 +26,10 @@
         <span class="menu-toggle-icon" aria-hidden="true"><i></i><i></i></span>
       </button>
       <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-        <a href="home.html" data-page="home">Home</a>
-        <a href="projects.html" data-page="projects" aria-current="page">Projects</a>
-        <a href="blog.html" data-page="blog">Blog</a>
-        <a href="about.html" data-page="about">About</a>
-        <a href="contact.html" data-page="contact">Contact</a>
+        <a href="home.html">Home</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
         <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true">
           <span class="theme-icon" aria-hidden="true">
             <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.1 15.4A8.5 8.5 0 0 1 8.6 3.9 8.5 8.5 0 1 0 20.1 15.4Z"/></svg>
@@ -59,16 +61,27 @@
             </div>
           </div>
 
-          <div class="about-grid" style="padding-top: 70px;">
+          <section class="about-grid project-story-section" aria-labelledby="qrqreator-why-title">
+            <div>
+              <h2 id="qrqreator-why-title">Why I Built This</h2>
+            </div>
+            <div class="about-copy">
+              <p>qrQreator is a project I built to explore a practical solution involving QR code creation. I wanted to work on something useful rather than simply build another project for practice.</p>
+              <p>It also gave me an opportunity to improve my development skills by taking an idea, working through its implementation and learning from the challenges that came with building it.</p>
+              <p>For me, qrQreator is both a practical project and part of my learning journey as a developer. It represents my interest in turning ideas into working applications and improving through hands-on experience.</p>
+            </div>
+          </section>
+
+          <div class="about-grid project-story-section">
             <div>
               <h2>Problem</h2>
               <p>People need a practical way to turn useful information into a scannable QR code while keeping the final design clear and recognisable.</p>
-              <h2 style="margin-top: 35px;">Approach</h2>
+              <h2>Approach</h2>
               <p>The application keeps the process in the browser and presents a guided studio: choose a content type, enter the details, customise the QR code and download the result.</p>
             </div>
             <div class="about-copy">
               <h2>Main features</h2>
-              <ul class="home-skill-list">
+              <ul class="project-feature-list">
                 <li>12 QR content types</li>
                 <li>Foreground and background colours</li>
                 <li>Size and error correction</li>
@@ -80,14 +93,14 @@
             </div>
           </div>
 
-          <div class="about-grid" style="padding-top: 20px;">
+          <div class="about-grid project-story-section">
             <div>
               <h2>Design and development</h2>
               <p>The interface is organised around a three-step studio flow: choose a QR type, add content and customise the design. The project is implemented as a static, browser-focused frontend with separate pages for the landing experience and studio.</p>
             </div>
             <div class="about-copy">
               <h2>Technologies</h2>
-              <ul class="home-skill-list">
+              <ul class="project-feature-list">
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
@@ -102,7 +115,14 @@
       <a class="wordmark footer-wordmark" href="home.html" aria-label="tiMed.dev, back to home"><span class="wordmark-name">tiMed<span class="wordmark-dot">.</span>dev</span></a>
       <p class="footer-credit">Developed by <span>Sadik Tijani Mohammed</span></p>
       <a class="back-top mono" href="#top">BACK TO TOP</a>
-      <span class="footer-year mono">© <span id="year">2026</span></span>
+      <div class="footer-meta">
+        <nav class="footer-contact" aria-label="Contact">
+          <a class="footer-whatsapp" href="https://wa.me/233244726234" target="_blank" rel="noopener noreferrer" aria-label="Message me on WhatsApp">
+            <img src="assets/icons/whatsapp.svg" alt="">
+          </a>
+        </nav>
+        <span class="footer-year mono">© <span id="year">2026</span></span>
+      </div>
     </footer>
   </body>
 </html>

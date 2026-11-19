@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#191b20">
+    <meta name="theme-color" content="#050b18">
     <meta name="description" content="Contact Sadik Tijani Mohammed about web development.">
     <title>Contact — tiMed.dev</title>
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
@@ -12,9 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <script src="js/theme.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/navigation.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/interactions.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
-  <body id="top" data-page="contact">
+  <body id="top">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="wordmark" href="home.html" aria-label="Portfolio home"><span class="wordmark-name">PORTFOLIO.</span></a>
@@ -23,11 +26,10 @@
         <span class="menu-toggle-icon" aria-hidden="true"><i></i><i></i></span>
       </button>
       <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-        <a href="home.html" data-page="home">Home</a>
-        <a href="projects.html" data-page="projects">Projects</a>
-        <a href="blog.html" data-page="blog">Blog</a>
-        <a href="about.html" data-page="about">About</a>
-        <a href="contact.html" data-page="contact" aria-current="page">Contact</a>
+        <a href="home.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
         <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true">
           <span class="theme-icon" aria-hidden="true">
             <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.1 15.4A8.5 8.5 0 0 1 8.6 3.9 8.5 8.5 0 1 0 20.1 15.4Z"/></svg>
@@ -38,30 +40,41 @@
     </header>
 
     <main id="main">
-      <section class="page-intro">
+      <section class="page-intro contact-intro">
         <div class="page-intro-inner">
           <h1 class="page-title">Contact</h1>
           <p class="page-lead">Have a web project in mind? Send a note or connect through one of my profiles.</p>
         </div>
       </section>
-      <div class="page-content">
+      <div class="page-content contact-page-content">
         <div class="contact-methods">
-          <section class="contact-method">
+          <section class="contact-method contact-email">
             <h2>Email</h2>
-            <p><a href="mailto:hello@timed.dev?subject=Hello%20Sadik">hello@timed.dev</a></p>
-            <p class="project-note">This email address is a placeholder and must be replaced before launch.</p>
+            <a class="contact-channel-link" href="mailto:sadiktijanimohammed@gmail.com?subject=Hello%20Sadik">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+              <span>sadiktijanimohammed@gmail.com</span>
+            </a>
           </section>
-          <section class="contact-method">
+          <section class="contact-method contact-whatsapp">
+            <h2>WhatsApp</h2>
+            <a class="contact-channel-link" href="https://wa.me/233244726234" target="_blank" rel="noopener noreferrer" aria-label="Message me on WhatsApp">
+              <img src="assets/icons/whatsapp.svg" alt="">
+              <span>Message me on WhatsApp</span>
+            </a>
+          </section>
+          <section class="contact-method contact-social">
             <h2>Social profiles</h2>
             <div class="social-links">
-              <a href="https://github.com/blaqmoha-04" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="https://www.linkedin.com/in/tijani-mohammed-sadik-7633983b9" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://web.facebook.com/profile.php?id=61581865631331" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a href="https://github.com/blaqmoha-04" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 .1.75 2.67 3.6 1.96.1-.72.4-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.06 1.15a10.64 10.64 0 0 1 5.57 0c2.12-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.12 2.96.71.78 1.14 1.78 1.14 3.01 0 4.29-2.61 5.23-5.1 5.51.4.35.75 1.02.75 2.06v3.05c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/tijani-mohammed-sadik-7633983b9" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.45H4.96V9h2.97v9.45ZM6.45 7.71a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44Zm12 10.74h-2.97v-4.6c0-1.1-.02-2.51-1.53-2.51-1.53 0-1.77 1.2-1.77 2.43v4.68H9.21V9h2.85v1.29h.04c.4-.74 1.37-1.53 2.82-1.53 3.01 0 3.57 1.98 3.57 4.56v5.13Z"/></svg>
+              </a>
+              <a href="https://web.facebook.com/profile.php?id=61581865631331" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 21v-8.2h2.76l.41-3.2H13.5V7.56c0-.93.26-1.56 1.6-1.56h1.7V3.14c-.3-.04-1.34-.14-2.55-.14-2.53 0-4.26 1.54-4.26 4.37V9.6H7.12v3.2h2.87V21h3.51Z"/></svg>
+              </a>
             </div>
-          </section>
-          <section class="contact-method">
-            <h2>WhatsApp</h2>
-            <p>A WhatsApp number hasn't been provided, so there isn't a WhatsApp link yet.</p>
           </section>
         </div>
       </div>
@@ -71,7 +84,14 @@
       <a class="wordmark footer-wordmark" href="home.html" aria-label="tiMed.dev, back to home"><span class="wordmark-name">tiMed<span class="wordmark-dot">.</span>dev</span></a>
       <p class="footer-credit">Developed by <span>Sadik Tijani Mohammed</span></p>
       <a class="back-top mono" href="#top">BACK TO TOP</a>
-      <span class="footer-year mono">© <span id="year">2026</span></span>
+      <div class="footer-meta">
+        <nav class="footer-contact" aria-label="Contact">
+          <a class="footer-whatsapp" href="https://wa.me/233244726234" target="_blank" rel="noopener noreferrer" aria-label="Message me on WhatsApp">
+            <img src="assets/icons/whatsapp.svg" alt="">
+          </a>
+        </nav>
+        <span class="footer-year mono">© <span id="year">2026</span></span>
+      </div>
     </footer>
   </body>
 </html>

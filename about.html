@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#191b20">
+    <meta name="theme-color" content="#050b18">
     <meta name="description" content="About Sadik Tijani Mohammed, a web developer focused on accessible, responsive and useful websites.">
     <title>About — tiMed.dev</title>
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
@@ -12,9 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <script src="js/theme.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/navigation.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/interactions.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
-  <body id="top" data-page="about">
+  <body id="top">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="wordmark" href="home.html" aria-label="Portfolio home"><span class="wordmark-name">PORTFOLIO.</span></a>
@@ -23,11 +26,10 @@
         <span class="menu-toggle-icon" aria-hidden="true"><i></i><i></i></span>
       </button>
       <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-        <a href="home.html" data-page="home">Home</a>
-        <a href="projects.html" data-page="projects">Projects</a>
-        <a href="blog.html" data-page="blog">Blog</a>
-        <a href="about.html" data-page="about" aria-current="page">About</a>
-        <a href="contact.html" data-page="contact">Contact</a>
+        <a href="home.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="contact.html">Contact</a>
         <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true">
           <span class="theme-icon" aria-hidden="true">
             <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.1 15.4A8.5 8.5 0 0 1 8.6 3.9 8.5 8.5 0 1 0 20.1 15.4Z"/></svg>
@@ -38,38 +40,35 @@
     </header>
 
     <main id="main">
-      <section class="page-intro">
+      <section class="page-intro about-intro">
         <div class="page-intro-inner">
           <h1 class="page-title">About Me</h1>
-          <p class="page-lead">I'm Sadik Tijani Mohammed, a web developer interested in building clear, accessible and useful websites.</p>
+          <article class="about-story">
+            <p>Hi, I'm <strong>Sadik Tijani Mohammed</strong>, a web developer interested in how technology works and what people can build with it.</p>
+            <p>My journey into web development started when I had the opportunity to join <strong>NiV Hub</strong>, a social enterprise organisation in Northern Ghana that works to improve the economic opportunities available to young people.</p>
+            <p>NiV creates opportunities through practical skills training, business incubation, mentorship and business support. One of its initiatives is the <strong>Skills Training and Economic Prosperity (STEP) Project</strong>, which helps young people gain practical skills they can use in employment and entrepreneurship.</p>
+            <p>I became interested in web development through the <strong>Step to Code programme</strong>. That was where I got my first proper introduction to building websites. I learned the basics of HTML, CSS and JavaScript under the guidance of <strong>Mr. Nurudeen</strong>. Before then, I had an interest in technology, but the programme gave me a clearer idea of what I could actually do with it.</p>
+            <p>After the programme, I continued learning on my own. <strong>The Odin Project</strong> has been one of the resources I've found particularly useful. I also follow YouTube tutorials, read documentation and spend time experimenting with code. I don't just want to follow instructions and get something working; I want to understand why it works.</p>
+            <p id="technologies">Most of my attention is currently on front-end development. I've been working with HTML, CSS, JavaScript, TypeScript, React, Next.js and Tailwind CSS. I'm also exploring the back end, including Node.js, Express.js, PostgreSQL and REST APIs.</p>
+            <p>I enjoy taking an idea, breaking it down and gradually turning it into something that works. Some things take longer than expected, and sometimes I have to go back and figure out what went wrong. That's part of the process I'm learning to appreciate.</p>
+            <p>I know I still have a lot to learn, but that's what keeps me interested in software development. I enjoy building things, figuring out how they work and finding ways to improve them. I want to keep challenging myself, work on more meaningful projects and grow into a developer who can turn ideas into useful applications.</p>
+          </article>
         </div>
       </section>
-      <div class="page-content page-content-narrow">
-        <section class="page-section">
-          <h2>My path into web development</h2>
-          <p>My development practice starts with the fundamentals: HTML, CSS and JavaScript. I use them to explore how thoughtful structure and small, well-tested interactions can make a website easier to use.</p>
-          <p>I'm also working with Python and Flask, and use Git to keep code changes organized.</p>
-        </section>
-        <section class="page-section">
-          <h2>What I'm interested in</h2>
-          <p>I'm especially interested in frontend development, responsive layouts, accessibility, interactive web experiences, and solving practical programming problems.</p>
-        </section>
-        <section class="page-section" id="technologies">
-          <h2>Technologies</h2>
-          <p>HTML, CSS, JavaScript, Python, Flask and Git, along with responsive web development.</p>
-        </section>
-        <section class="page-section">
-          <h2>Professional goals</h2>
-          <p>I want to keep growing as a web developer and contribute to websites that are dependable, inclusive and genuinely useful to the people who use them.</p>
-        </section>
-      </div>
     </main>
 
     <footer class="site-footer">
       <a class="wordmark footer-wordmark" href="home.html" aria-label="tiMed.dev, back to home"><span class="wordmark-name">tiMed<span class="wordmark-dot">.</span>dev</span></a>
       <p class="footer-credit">Developed by <span>Sadik Tijani Mohammed</span></p>
       <a class="back-top mono" href="#top">BACK TO TOP</a>
-      <span class="footer-year mono">© <span id="year">2026</span></span>
+      <div class="footer-meta">
+        <nav class="footer-contact" aria-label="Contact">
+          <a class="footer-whatsapp" href="https://wa.me/233244726234" target="_blank" rel="noopener noreferrer" aria-label="Message me on WhatsApp">
+            <img src="assets/icons/whatsapp.svg" alt="">
+          </a>
+        </nav>
+        <span class="footer-year mono">© <span id="year">2026</span></span>
+      </div>
     </footer>
   </body>
 </html>

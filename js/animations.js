@@ -114,7 +114,7 @@ function createGeometryShape(shapeData, position) {
 
 function initAnimations() {
   const surfaces = document.querySelectorAll(
-    "body, .site-header, .primary-nav, .home-work, .home-profile, .home-writing, .home-contact, .about, .work, .capabilities, .contact, .page-intro, .site-footer"
+    "body, .site-header, .primary-nav, .home-work, .home-profile, .home-contact, .work, .page-intro, .site-footer"
   );
 
   // Use different positions in each section so the shapes do not form a repeated grid.

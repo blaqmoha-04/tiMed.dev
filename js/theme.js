@@ -27,7 +27,7 @@ function updateTheme(theme, savePreference) {
   themeRoot.dataset.theme = isDark ? "dark" : "light";
 
   if (themeColorMeta) {
-    themeColorMeta.content = isDark ? "#191b20" : "#f3f1eb";
+    themeColorMeta.content = isDark ? "#050b18" : "#ffffff";
   }
 
   const themeButton = document.querySelector(".theme-toggle");
@@ -45,7 +45,6 @@ function updateTheme(theme, savePreference) {
   }
 }
 
-// Apply the saved preference before the page styles render.
 updateTheme(getInitialTheme(), false);
 
 function initTheme() {

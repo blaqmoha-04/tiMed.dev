@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#191b20">
+    <meta name="theme-color" content="#050b18">
     <meta name="description" content="Web development concepts and project previews by Sadik Tijani Mohammed.">
     <title>Projects — tiMed.dev</title>
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
@@ -12,9 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <script src="js/theme.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/navigation.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/interactions.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
-  <body id="top" data-page="projects">
+  <body id="top">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="wordmark" href="home.html" aria-label="Portfolio home"><span class="wordmark-name">PORTFOLIO.</span></a>
@@ -23,11 +26,10 @@
         <span class="menu-toggle-icon" aria-hidden="true"><i></i><i></i></span>
       </button>
       <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-        <a href="home.html" data-page="home">Home</a>
-        <a href="projects.html" data-page="projects" aria-current="page">Projects</a>
-        <a href="blog.html" data-page="blog">Blog</a>
-        <a href="about.html" data-page="about">About</a>
-        <a href="contact.html" data-page="contact">Contact</a>
+        <a href="home.html">Home</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
         <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true">
           <span class="theme-icon" aria-hidden="true">
             <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.1 15.4A8.5 8.5 0 0 1 8.6 3.9 8.5 8.5 0 1 0 20.1 15.4Z"/></svg>
@@ -42,7 +44,7 @@
         <div class="section-shell">
           <div class="work-intro">
             <h1 id="projects-title">Projects</h1>
-            <p>Selected web projects and interface concepts, spanning completed applications and design studies.</p>
+            <p>Selected web applications with live demos and public source repositories.</p>
           </div>
 
           <div class="project-grid">
@@ -57,67 +59,39 @@
                   <p class="project-note">QR Code Design Studio · HTML, CSS and JavaScript</p>
                 </div>
                 <a class="project-text-link" href="qrqreator.html">View project</a>
-                <a class="project-text-link" href="https://blaqmoha-04.github.io/qrQreator/" target="_blank" rel="noopener noreferrer">View live project</a>
+                <div class="project-actions">
+                  <a class="project-text-link project-action-live" href="https://blaqmoha-04.github.io/qrQreator/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                  <a class="project-text-link" href="https://github.com/blaqmoha-04/qrQreator" target="_blank" rel="noopener noreferrer">View Source</a>
+                </div>
               </div>
             </article>
 
-            <article class="project-card project-card-large" id="orbit">
-              <div class="project-visual visual-orbit" role="img" aria-label="Orbit Mobility landing-page concept preview">
-                <div class="mock-browser">
-                  <div class="mock-browser-bar"><span></span><span></span><span></span></div>
-                  <div class="orbit-screen">
-                    <span class="orbit-word">orbit</span>
-                    <div class="orbit-headline">A new<br>way to<br><em>move.</em></div>
-                    <div class="orbit-disc"><span>O</span></div>
-                  </div>
-                </div>
+            <article class="project-card project-card-large" id="cvqreator">
+              <div class="project-visual visual-cvqreator" role="img" aria-label="cvQreator live application homepage and CV preview">
+                <img src="assets/images/cvqreator-preview.png" alt="Screenshot of cvQreator's CV builder homepage">
               </div>
               <div class="project-meta">
-                <h3>Orbit Mobility</h3>
+                <h3>cvQreator</h3>
                 <div class="project-details">
-                  <p>A landing-page study for a more considered approach to city travel.</p>
-                  <p class="project-note">Preview: HTML and CSS. No separate live build or repository.</p>
+                  <p>A modern, frontend-only CV builder that lets users create, customise, preview and download professional CVs without registration.</p>
+                  <ul class="project-feature-list">
+                    <li>Six professional CV layouts and a live preview</li>
+                    <li>Customise, show, hide and reorder CV sections</li>
+                    <li>Data saved in the browser</li>
+                    <li>Print or save a CV as PDF</li>
+                  </ul>
+                  <p class="project-note">Frontend application · HTML, CSS and JavaScript</p>
                 </div>
-                <a class="project-text-link" href="contact.html">Ask about this concept</a>
+                <a class="project-text-link" href="cvqreator.html">View project</a>
+                <div class="project-actions">
+                  <a class="project-text-link project-action-live" href="https://blaqmoha-04.github.io/cvQreator/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                  <a class="project-text-link" href="https://github.com/blaqmoha-04/cvQreator" target="_blank" rel="noopener noreferrer">View Source</a>
+                </div>
               </div>
             </article>
 
-            <article class="project-card project-card-offset" id="still">
-              <div class="project-visual visual-still" role="img" aria-label="Still Journal responsive site concept preview">
-                <div class="still-card">
-                  <div class="still-top mono"><span>STILL.</span></div>
-                  <div class="still-art" aria-hidden="true"><div class="still-sun"></div><div class="still-horizon"></div><div class="still-ripple ripple-one"></div><div class="still-ripple ripple-two"></div><div class="still-ripple ripple-three"></div></div>
-                  <div class="still-title">Find your<br><em>quiet.</em></div>
-                </div>
-              </div>
-              <div class="project-meta">
-                <h3>Still Journal</h3>
-                <div class="project-details">
-                  <p>A responsive journal site concept about rest and everyday rituals.</p>
-                  <p class="project-note">Preview: HTML and CSS. No separate live build or repository.</p>
-                </div>
-              </div>
-              <a class="project-text-link" href="contact.html">Ask about this concept</a>
-            </article>
-
-            <article class="project-card project-card-third" id="form">
-              <div class="project-visual visual-form" role="img" aria-label="Form Objects product-page concept preview">
-                <div class="form-screen">
-                  <div class="form-copy"><span>LESS, BUT<br>BETTER.</span></div>
-                  <div class="form-object" aria-hidden="true"><div></div></div>
-                </div>
-              </div>
-              <div class="project-meta">
-                <h3>Form Objects</h3>
-                <div class="project-details">
-                  <p>A simple product-page study for a small collection of home objects.</p>
-                  <p class="project-note">Preview: HTML and CSS. No separate live build or repository.</p>
-                </div>
-              </div>
-              <a class="project-text-link" href="contact.html">Ask about this concept</a>
-            </article>
           </div>
-          <p class="work-note mono">PROJECTS INCLUDE COMPLETED APPLICATIONS AND INTERFACE CONCEPTS.</p>
+          <p class="work-note mono">BOTH PROJECTS HAVE A LIVE DEMO AND PUBLIC SOURCE.</p>
         </div>
       </section>
     </main>
@@ -126,7 +100,14 @@
       <a class="wordmark footer-wordmark" href="home.html" aria-label="tiMed.dev, back to home"><span class="wordmark-name">tiMed<span class="wordmark-dot">.</span>dev</span></a>
       <p class="footer-credit">Developed by <span>Sadik Tijani Mohammed</span></p>
       <a class="back-top mono" href="#top">BACK TO TOP</a>
-      <span class="footer-year mono">© <span id="year">2026</span></span>
+      <div class="footer-meta">
+        <nav class="footer-contact" aria-label="Contact">
+          <a class="footer-whatsapp" href="https://wa.me/233244726234" target="_blank" rel="noopener noreferrer" aria-label="Message me on WhatsApp">
+            <img src="assets/icons/whatsapp.svg" alt="">
+          </a>
+        </nav>
+        <span class="footer-year mono">© <span id="year">2026</span></span>
+      </div>
     </footer>
   </body>
 </html>
